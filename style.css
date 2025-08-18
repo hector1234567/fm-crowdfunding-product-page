@@ -174,3 +174,30 @@
     color: var(--text-brand-main);
   }
 }
+
+@layer layout {
+  .wrapper {
+    --wrapper-max-width: 110.9rem;
+    --wrapper-padding: 2.4rem;
+
+    max-width: calc(var(--wrapper-max-width) + 2 * var(--wrapper-padding));
+    margin-inline: auto;
+    padding-inline: var(--wrapper-padding);
+
+    &[data-type="narrow"] {
+      --wrapper-max-width: 73rem;
+    }
+  }
+}
+
+@layer utilities {
+  .visually-hidden {
+    clip: rect(0 0 0 0);
+    clip-path: inset(50%);
+    height: 1px;
+    overflow: hidden;
+    position: absolute;
+    white-space: nowrap;
+    width: 1px;
+  }
+}
