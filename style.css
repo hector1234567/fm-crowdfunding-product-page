@@ -134,9 +134,9 @@
     --font-size-lg: var(--fs-600);
     --font-size-xl: var(--fs-1000);
 
-    --border-radius: 0.8rem;
+    --border-radius-regular: 0.8rem;
 
-    --border-color: var(--clr-gray-200);
+    --border-ligth: 0.1rem solid var(--clr-gray-200);
 
     @media (width > 760px) {
       --font-size-heading-sm: var(--fs-600);
@@ -167,6 +167,7 @@
 
   a {
     color: var(--text-high-contrast);
+    text-decoration: none;
   }
 
   a:hover,
@@ -190,6 +191,30 @@
   }
 }
 
+@layer components {
+  .site-header {
+    height: 30rem;
+    background-image: linear-gradient(to bottom, #000, transparent),
+      url(/images/image-hero-mobile.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding-block-start: 3.2rem;
+  }
+
+  .site-header__inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .primary-navigation {
+    ul {
+      display: flex;
+      gap: 3.2rem;
+    }
+  }
+}
+
 @layer utilities {
   .visually-hidden {
     clip: rect(0 0 0 0);
@@ -199,5 +224,72 @@
     position: absolute;
     white-space: nowrap;
     width: 1px;
+  }
+
+  text-main {
+    color: var(--text-main);
+  }
+  text-high-contrast {
+    color: var(--text-high-contrast);
+  }
+  text-dark {
+    color: var(--text-dark);
+  }
+  text-contrast-light {
+    color: var(--text-contrast-light);
+  }
+  text-brand-main {
+    color: var(--text-brand-main);
+  }
+
+  background-brand-light {
+    background-color: var(--background-brand-light);
+  }
+  background-brand-main {
+    background-color: var(--background-brand-main);
+  }
+  background-brand-dark {
+    background-color: var(--background-brand-dark);
+  }
+
+  background-light {
+    background-color: var(--background-light);
+  }
+  background-main {
+    background-color: var(--background-main);
+  }
+
+  font-size-heading-sm {
+    font-size: var(--font-size-heading-sm);
+  }
+  font-size-heading-regular {
+    font-size: var(--font-size-heading-regular);
+  }
+  font-size-heading-lg {
+    font-size: var(--font-size-heading-lg);
+  }
+
+  font-size-sm {
+    font-size: var(--font-size-sm);
+  }
+  font-size-regular {
+    font-size: var(--font-size-regular);
+  }
+  font-size-md {
+    font-size: var(--font-size-md);
+  }
+  font-size-lg {
+    font-size: var(--font-size-lg);
+  }
+  font-size-xl {
+    font-size: var(--font-size-xl);
+  }
+
+  border-radius-regular {
+    border-radius: var(--border-radius-regular);
+  }
+
+  border-ligth {
+    border: var(--border-ligth);
   }
 }
