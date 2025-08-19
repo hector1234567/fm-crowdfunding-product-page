@@ -189,6 +189,21 @@
       --wrapper-max-width: 73rem;
     }
   }
+
+  main {
+    margin-top: -8.4rem;
+
+    > * + * {
+      margin-block-start: 2.4rem;
+    }
+  }
+
+  .section {
+    padding: 3.35rem 2.4rem;
+    background-color: var(--background-light);
+    border-radius: var(--border-radius-regular);
+    border: var(--border-ligth);
+  }
 }
 
 @layer components {
@@ -203,14 +218,21 @@
 
   .site-header__inner {
     display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
     justify-content: space-between;
     align-items: center;
+
+    img {
+      height: 2rem;
+    }
   }
 
   .primary-navigation {
     ul {
       display: flex;
-      gap: 3.2rem;
+      flex-wrap: wrap;
+      gap: 1rem 3.2rem;
     }
   }
 }
@@ -226,70 +248,70 @@
     width: 1px;
   }
 
-  text-main {
+  .text-main {
     color: var(--text-main);
   }
-  text-high-contrast {
+  .text-high-contrast {
     color: var(--text-high-contrast);
   }
-  text-dark {
+  .text-dark {
     color: var(--text-dark);
   }
-  text-contrast-light {
+  .text-contrast-light {
     color: var(--text-contrast-light);
   }
-  text-brand-main {
+  .text-brand-main {
     color: var(--text-brand-main);
   }
 
-  background-brand-light {
+  .background-brand-light {
     background-color: var(--background-brand-light);
   }
-  background-brand-main {
+  .background-brand-main {
     background-color: var(--background-brand-main);
   }
-  background-brand-dark {
+  .background-brand-dark {
     background-color: var(--background-brand-dark);
   }
 
-  background-light {
+  .background-light {
     background-color: var(--background-light);
   }
-  background-main {
+  .background-main {
     background-color: var(--background-main);
   }
 
-  font-size-heading-sm {
+  .font-size-heading-sm {
     font-size: var(--font-size-heading-sm);
   }
-  font-size-heading-regular {
+  .font-size-heading-regular {
     font-size: var(--font-size-heading-regular);
   }
-  font-size-heading-lg {
+  .font-size-heading-lg {
     font-size: var(--font-size-heading-lg);
   }
 
-  font-size-sm {
+  .font-size-sm {
     font-size: var(--font-size-sm);
   }
-  font-size-regular {
+  .font-size-regular {
     font-size: var(--font-size-regular);
   }
-  font-size-md {
+  .font-size-md {
     font-size: var(--font-size-md);
   }
-  font-size-lg {
+  .font-size-lg {
     font-size: var(--font-size-lg);
   }
-  font-size-xl {
+  .font-size-xl {
     font-size: var(--font-size-xl);
   }
 
-  border-radius-regular {
+  .border-radius-regular {
     border-radius: var(--border-radius-regular);
   }
 
-  border-ligth {
+  .border-ligth {
     border: var(--border-ligth);
   }
 }
