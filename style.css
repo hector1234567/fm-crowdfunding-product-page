@@ -259,10 +259,10 @@
     }
   }
 
-  [data-target="modal"]:target {
+  .modal:target {
     display: block;
 
-    & + .modal {
+    & + .backdrop {
       display: block;
     }
   }

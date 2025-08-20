@@ -1,6 +1,7 @@
 const burgerBtn = document.querySelector(".burguer");
 const primaryNavigation = document.querySelector(".primary-navigation");
 const rewardBtns = document.querySelectorAll(".card a.button");
+const form = document.querySelector(".form");
 
 burgerBtn.addEventListener("click", function (ev) {
   const expanded = burgerBtn.getAttribute("aria-expanded");
