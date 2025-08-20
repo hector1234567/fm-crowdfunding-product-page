@@ -14,12 +14,22 @@
 
     <title>Frontend Mentor | Crowdfunding product page</title>
     <link rel="stylesheet" href="style.css" />
+    <script src="index.js" defer></script>
   </head>
   <body>
     <header class="site-header">
       <div class="wrapper">
         <div class="site-header__inner">
-          <a href="/"><img src="/images/logo.svg" alt="Croudfund" /></a>
+          <a class="logo" href="/"
+            ><img src="/images/logo.svg" alt="Croudfund"
+          /></a>
+          <button
+            class="burguer"
+            aria-controls="primary-navigation"
+            aria-expanded="false"
+          >
+            <img src="/images/icon-hamburger.svg" alt="" />
+          </button>
           <nav class="primary-navigation">
             <ul role="list">
               <li><a href="#">About</a></li>
@@ -140,7 +150,7 @@
         </ul>
       </section>
     </main>
-
+    <div class="backdrop"></div>
     <!-- Selection modal start -->
 
     <!-- Back this project
