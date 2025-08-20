@@ -221,6 +221,7 @@
   }
 
   .modal {
+    display: none;
     position: absolute;
     left: 50%;
     top: 18.4rem;
@@ -253,9 +254,16 @@
     }
 
     &[data-target="modal"] {
-      display: block;
       z-index: 200;
       background-color: hsla(0, 0%, 0%, 0.5);
+    }
+  }
+
+  [data-target="modal"]:target {
+    display: block;
+
+    & + .modal {
+      display: block;
     }
   }
 }
@@ -455,6 +463,10 @@
     }
   }
 
+  .card:has(button:disabled) {
+    opacity: 0.5;
+  }
+
   .card__qty,
   .product__qty {
     display: flex;
@@ -567,8 +579,12 @@
     }
 
     .product__footer {
-      display: block;
+      display: flex;
     }
+  }
+
+  .product:has([type="radio"]:disabled) {
+    opacity: 0.5;
   }
 
   .product__content {
@@ -596,6 +612,10 @@
       font-weight: var(--font-weight-bold);
       color: var(--text-dark);
       cursor: pointer;
+
+      &:hover {
+        color: var(--text-brand-main);
+      }
     }
 
     p {
@@ -608,6 +628,20 @@
     display: none;
     padding: 2.85rem 2.4rem;
     border-top: var(--border-light);
+    justify-content: space-between;
+    gap: 2.4rem;
+    flex-wrap: wrap;
+    text-align: center;
+    align-items: center;
+
+    > div {
+      display: flex;
+      gap: 1.6rem;
+    }
+
+    @media (width < 625px) {
+      flex-direction: column;
+    }
   }
 
   .radio-circle {
@@ -616,6 +650,31 @@
     border-radius: 999rem;
     border: var(--border-light);
     align-self: center;
+  }
+
+  .input-wrapper {
+    position: relative;
+    font-weight: var(--font-weight-bold);
+    font-size: var(--font-size-lg);
+
+    input {
+      border: var(--border-light);
+      border-radius: 999rem;
+      height: 100%;
+      background-color: transparent;
+      width: 10rem;
+      padding-left: 4.1rem;
+    }
+
+    &::before {
+      content: "$";
+      display: block;
+      position: absolute;
+      transform: translateY(-50%);
+      top: 50%;
+      left: 2.4rem;
+      opacity: 0.5;
+    }
   }
 }
 
