@@ -161,7 +161,13 @@
       </section>
     </main>
     <div class="backdrop" data-target="menu"></div>
-    <div id="back-this-project" class="modal wrapper" data-type="narrow">
+
+    <!-- Selection modal start -->
+    <div
+      id="back-this-project"
+      class="selection-modal modal wrapper"
+      data-type="narrow"
+    >
       <a href="#" class="close-modal">
         <img src="/images/icon-close-modal.svg" alt="" />
       </a>
@@ -281,53 +287,25 @@
         </div>
       </form>
     </div>
-    <a href="#" class="backdrop" data-target="modal"></a>
-    <!-- Selection modal start -->
-
-    <!-- 
-  
-  
-  
-  
-   left -->
-
-    <!-- Selected pledge start -->
-    <!-- 
-  $25
-  Continue -->
-    <!-- Selected pledge end -->
-
-    <!-- 
-  Pledge $75 or more
-  
-  64 left -->
-
-    <!-- Selected pledge start -->
-    <!-- Enter your pledge
-  $75
-  Continue -->
-    <!-- Selected pledge end -->
-
-    <!-- 
-  Pledge $200 or more
-  
-  0 left -->
-
-    <!-- Selected pledge  start -->
-    <!-- Enter your pledge
-  $200
-  Continue -->
-    <!-- Selected pledge end -->
-
-    <!-- Selection modal end -->
+    <a href="#" class="backdrop" data-target="selection-modal"></a>
 
     <!-- Success modal start -->
-
-    <!-- Thanks for your support!
-  Your pledge brings us one step closer to sharing Mastercraft Bamboo Monitor Riser worldwide. You will get
-  an email once our campaign is completed.
-  Got it! -->
-
-    <!-- Success modal end -->
+    <div
+      id="success"
+      class="success-modal modal wrapper"
+      data-type="extra-narrow"
+    >
+      <div class="icon-success">
+        <img src="/images/icon-check.svg" alt="Check" />
+      </div>
+      <h2>Thanks for your support!</h2>
+      <p>
+        Your pledge brings us one step closer to sharing Mastercraft Bamboo
+        Monitor Riser worldwide. You will get an email once our campaign is
+        completed.
+      </p>
+      <a href="#" class="button" data-size="small">Got it!</a>
+    </div>
+    <div class="backdrop" data-target="success-modal"></div>
   </body>
 </html>
