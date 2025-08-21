@@ -27,3 +27,8 @@ rewardBtns.forEach((btn) => {
     });
   });
 });
+
+form.addEventListener("submit", function (ev) {
+  ev.preventDefault();
+  window.location.hash = "#success";
+});
