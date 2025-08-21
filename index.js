@@ -1,6 +1,7 @@
 const burgerBtn = document.querySelector(".burguer");
 const backdrop = document.querySelector('.backdrop[data-target="menu"]');
 const primaryNavigation = document.querySelector(".primary-navigation");
+const navLinks = document.querySelectorAll(".primary-navigation a");
 const rewardBtns = document.querySelectorAll(".card a.button");
 const form = document.querySelector(".form");
 const loader = document.querySelector(".loader");
@@ -20,6 +21,12 @@ burgerBtn.addEventListener("click", function (ev) {
 backdrop.addEventListener("click", () =>
   burgerBtn.setAttribute("aria-expanded", "false")
 );
+
+navLinks.forEach(function (link) {
+  link.addEventListener("click", () =>
+    burgerBtn.setAttribute("aria-expanded", "false")
+  );
+});
 
 rewardBtns.forEach((btn) => {
   btn.addEventListener("click", function () {

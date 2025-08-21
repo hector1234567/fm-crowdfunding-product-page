@@ -156,6 +156,10 @@
     }
   }
 
+  html {
+    scroll-behavior: smooth;
+  }
+
   body {
     font-family: var(--ff-body);
     font-size: var(--font-size-regular);
