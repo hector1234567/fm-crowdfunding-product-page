@@ -3,6 +3,10 @@ const backdrop = document.querySelector('.backdrop[data-target="menu"]');
 const primaryNavigation = document.querySelector(".primary-navigation");
 const rewardBtns = document.querySelectorAll(".card a.button");
 const form = document.querySelector(".form");
+const loader = document.querySelector(".loader");
+const loaderBackdrop = document.querySelector(
+  '.backdrop[data-target="loader"]'
+);
 
 burgerBtn.addEventListener("click", function (ev) {
   const expanded = burgerBtn.getAttribute("aria-expanded");
@@ -30,16 +34,13 @@ rewardBtns.forEach((btn) => {
 
 form.addEventListener("submit", function (ev) {
   ev.preventDefault();
-  const loader = document.querySelector(".loader");
-  const loaderBackdrop = document.querySelector(
-    '.backdrop[data-target="loader"]'
-  );
 
   loader.style.display = "inline-block";
   loaderBackdrop.style.display = "block";
+
   setTimeout(function () {
     window.location.hash = "#success";
     loader.style.display = "none";
     loaderBackdrop.style.display = "none";
-  }, 5000);
+  }, 3000);
 });

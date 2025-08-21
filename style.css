@@ -10,7 +10,6 @@
     box-sizing: border-box;
   }
 
-  /* https://kilianvalkhof.com/2022/css-html/your-css-reset-needs-text-size-adjust-probably/ */
   html {
     -moz-text-size-adjust: none;
     -webkit-text-size-adjust: none;
@@ -32,7 +31,6 @@
     margin: 0;
   }
 
-  /* https://www.scottohara.me/blog/2019/01/12/lists-and-safari.html */
   [role="list"] {
     list-style: none;
     margin: 0;
@@ -123,6 +121,7 @@
 
     --background-brand-light: var(--clr-gray-200);
     --background-brand-main: var(--clr-green-400);
+    --background-brand-hover: var(--clr-green-700);
     --background-brand-dark: var(--clr-gray-950);
 
     --background-light: var(--clr-white);
@@ -524,6 +523,10 @@
     &[data-size="small"] {
       font-size: var(--font-size-sm);
       padding: 1.5rem 3.25rem;
+    }
+
+    &:hover {
+      background-color: var(--background-brand-hover);
     }
   }
 
