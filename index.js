@@ -30,5 +30,16 @@ rewardBtns.forEach((btn) => {
 
 form.addEventListener("submit", function (ev) {
   ev.preventDefault();
-  window.location.hash = "#success";
+  const loader = document.querySelector(".loader");
+  const loaderBackdrop = document.querySelector(
+    '.backdrop[data-target="loader"]'
+  );
+
+  loader.style.display = "inline-block";
+  loaderBackdrop.style.display = "block";
+  setTimeout(function () {
+    window.location.hash = "#success";
+    loader.style.display = "none";
+    loaderBackdrop.style.display = "none";
+  }, 5000);
 });
