@@ -3,6 +3,10 @@
   src: url("/fonts/Commissioner-VariableFont_FLAR\,VOLM\,slnt\,wght.ttf");
 }
 
+@view-transition {
+  navigation: auto;
+}
+
 @layer reset {
   *,
   *::before,
@@ -235,6 +239,9 @@
 
   .modal {
     display: none;
+    opacity: 0;
+    transition: opacity 0.5s, display 0.5s;
+    transition-behavior: allow-discrete;
     padding: 4.7rem 4.8rem;
     background-color: var(--background-light);
     border-radius: var(--border-radius-regular);
@@ -279,6 +286,9 @@
 
   .backdrop {
     display: none;
+    opacity: 0;
+    transition: opacity 0.5s, display 0.5s;
+    transition-behavior: allow-discrete;
     position: fixed;
     top: 0;
     width: 100%;
@@ -293,15 +303,26 @@
 
     &[data-target="loader"] {
       z-index: 999;
+      opacity: 1;
     }
   }
 
   .selection-modal:target,
   .success-modal:target {
     display: block;
+    opacity: 1;
+
+    @starting-style {
+      opacity: 0;
+    }
 
     & + .backdrop {
       display: block;
+      opacity: 1;
+
+      @starting-style {
+        opacity: 0;
+      }
     }
   }
 }
@@ -348,6 +369,9 @@
 
     @media (width < 512px) {
       display: none;
+      opacity: 0;
+      transition: opacity 0.5s, display 0.5s;
+      transition-behavior: allow-discrete;
       position: absolute;
       top: 8.4rem;
       width: calc(100% - 2 * 2.4rem);
@@ -581,6 +605,11 @@
       .backdrop[data-target="menu"],
       .primary-navigation {
         display: block;
+        opacity: 1;
+
+        @starting-style {
+          opacity: 0;
+        }
       }
     }
   }
