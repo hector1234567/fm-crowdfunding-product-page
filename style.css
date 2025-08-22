@@ -271,6 +271,7 @@
     transform: translate(-50%, -50%);
     width: calc(100% - 2 * 2.4rem);
     text-align: center;
+    transition: none;
 
     .icon-success {
       height: 9rem;
@@ -303,6 +304,7 @@
 
     &[data-target="loader"] {
       z-index: 999;
+      transition: none;
       opacity: 1;
     }
   }
